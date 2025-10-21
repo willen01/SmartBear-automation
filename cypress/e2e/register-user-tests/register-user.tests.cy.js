@@ -1,3 +1,5 @@
+import { faker, Faker } from "@faker-js/faker";
+
 describe('validar registro de usuário', () => {
     beforeEach(() => {
         cy.visit('https://bearstore-testsite.smartbear.com/register');
@@ -31,4 +33,15 @@ describe('validar registro de usuário', () => {
         cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
     })
 
+
+    it('Cadastro de conta', () => {
+        cy.get("#Email").type("jhon.doe@provider.com")
+        cy.addFirstName(type(faker.internet.username()))
+        cy.get("#Password").type("123456")
+        cy.get("#ConfirmPassword").type("123456")
+        cy.clickRegister();
+        cy.contains('li', 'The specified email already exists')
+
+        cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
+    })
 })

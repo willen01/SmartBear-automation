@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('addFirstName', (firstName) => {
+    cy.get('#Username').type(firstName)
+})
+
+Cypress.Commands.add('clickRegister', () => {
+    cy.get('#register-button').click()
+})
