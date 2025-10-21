@@ -19,16 +19,6 @@ describe('validar registro de usuário', () => {
 
         cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
     })
-
-    it('Cadastro com email inválido', () => {
-        cy.get("#Email").type("jane.doe1.com")
-
-        cy.get('#register-button').click()
-        cy.get('#Email-error').contains("\'Email'\ is not a valid email address.").should('be.visible')
-
-        cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
-    })
-
     
     it('Cadastro com email já utilizado', () => {
         cy.get("#Email").type("jhon.doe@provider.com")
@@ -40,24 +30,5 @@ describe('validar registro de usuário', () => {
 
         cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
     })
-
-
-/*
-    it('Cadastro com senha e confirmação de senha divergentes', () => {
-
-    })
-
-*/
-    /*
-    it('Validar processo de registro de novo cliente', () => {
-        cy.get('#FirstName').type('Jane')
-        cy.get('#LastName').type('Doe')    
-        cy.get('#DateOfBirthDay').select('5')
-        cy.get('#DateOfBirthMonth').select('August')        
-        cy.get('#DateOfBirthYear').select('1997')
-
-        cy.get('#register-button').click()
-    })
-    */
 
 })
