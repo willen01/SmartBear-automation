@@ -20,7 +20,7 @@ describe('validar registro de usuário', () => {
         cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
     })
     
-    it('Cadastro com email já utilizado', () => {
+    it('Cadastro de usuário com e-mail já cadastrado', () => {
         cy.get("#Email").type("jhon.doe@provider.com")
         cy.get('#Username').type("jhony")
         cy.get("#Password").type("123456")
