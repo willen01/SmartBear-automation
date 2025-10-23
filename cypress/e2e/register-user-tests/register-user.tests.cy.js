@@ -7,7 +7,7 @@ describe('validar registro de usuário', () => {
     });
 
 
-    it.skip('Cadastro com campos obrigatórios vazios', () => {
+    it('Cadastro com campos obrigatórios vazios', () => {
         cy.get('#FirstName').type('Jane')
         cy.get('#LastName').type('Doe')    
         cy.get('#DateOfBirthDay').select('5')
@@ -23,7 +23,7 @@ describe('validar registro de usuário', () => {
         cy.url().should('eq', 'https://bearstore-testsite.smartbear.com/register')
     })
     
-    it.skip('Cadastro de usuário com e-mail já cadastrado', () => {
+    it('Cadastro de usuário com e-mail já cadastrado', () => {
         cy.get("#Email").type("jhon.doe@provider.com")
         cy.get('#Username').type("jhony")
         cy.get("#Password").type("123456")
