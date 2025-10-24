@@ -72,7 +72,9 @@ cypress/
 - ✅ Funcionalidades do carrinho de compras
 
 ### 🔐 Login
-- ✅ Funcionalidades de autenticação
+- ✅ Autenticação com credenciais válidas
+- ✅ Autenticação com credenciais inválidas
+- ✅ Envio de formulário de login vazio
 
 ## 🏃‍♂️ Como Executar os Testes
 
@@ -81,74 +83,6 @@ Abre a interface gráfica do Cypress para executar os testes visualmente:
 
 ```bash
 npx cypress open
-```
-
-### 2. Modo Headless (Linha de Comando)
-Executa todos os testes em modo headless (sem interface gráfica):
-
-```bash
-npx cypress run
-```
-
-### 3. Executar Testes Específicos
-
-**Executar apenas os testes de registro:**
-```bash
-npx cypress run --spec "cypress/e2e/register-user-tests/**"
-```
-
-**Executar apenas os testes de carrinho:**
-```bash
-cypress run --spec "cypress/e2e/shopping-cart-tests/**"
-```
-
-**Executar apenas os testes de login:**
-```bash
-cypress run --spec "cypress/e2e/login-tests/**"
-```
-
-### 4. Executar em Browsers Específicos
-
-**Chrome:**
-```bash
-cypress run --browser chrome
-```
-
-**Firefox:**
-```bash
-cypress run --browser firefox
-```
-
-**Edge:**
-```bash
-cypress run --browser edge
-```
-
-## 📊 Relatórios e Evidências
-
-### Videos e Screenshots
-Por padrão, o Cypress gera:
-- **Videos** dos testes executados em `cypress/videos/`
-- **Screenshots** de falhas em `cypress/screenshots/`
-
-### Configurações Adicionais
-Para personalizar os relatórios, edite o arquivo `cypress.config.js`:
-
-```javascript
-const { defineConfig } = require("cypress");
-
-module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-    // Configurações adicionais
-    video: true,
-    screenshotOnRunFailure: true,
-    viewportWidth: 1280,
-    viewportHeight: 720,
-  },
-});
 ```
 
 ## 🛠️ Tecnologias Utilizadas
@@ -186,61 +120,3 @@ registerPage.visitRegisterPage()
 - 📝 **Registro:** `/register`
 - 🔐 **Login:** `/login`
 - 🛒 **Carrinho:** `/cart`
-
-## 📝 Scripts Disponíveis
-
-Adicione estes scripts no `package.json` para facilitar a execução:
-
-```json
-{
-  "scripts": {
-    "test": "cypress run",
-    "test:open": "cypress open",
-    "test:register": "cypress run --spec 'cypress/e2e/register-user-tests/**'",
-    "test:cart": "cypress run --spec 'cypress/e2e/shopping-cart-tests/**'",
-    "test:login": "cypress run --spec 'cypress/e2e/login-tests/**'",
-    "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox"
-  }
-}
-```
-
-Após adicionar os scripts, use:
-```bash
-npm run test           # Executa todos os testes
-npm run test:open      # Abre o Cypress Test Runner
-npm run test:register  # Executa apenas testes de registro
-```
-
-## 🐛 Resolução de Problemas
-
-### Erro: "Cypress binary not found"
-```bash
-npx cypress install
-```
-
-### Erro de permissão no Linux/Mac
-```bash
-sudo npm install -g cypress
-```
-
-### Limpar cache do Cypress
-```bash
-npx cypress cache clear
-npx cypress install
-```
-
-## 📞 Suporte
-
-Para dúvidas ou problemas:
-- 📧 **Email:** [seu-email@exemplo.com]
-- 🐙 **GitHub Issues:** [Link para issues do repositório]
-- 📚 **Documentação Cypress:** https://docs.cypress.io/
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-**Desenvolvido com ❤️ para testes automatizados de qualidade!** 🚀
