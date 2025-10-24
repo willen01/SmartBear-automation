@@ -1,6 +1,21 @@
 # 🐻 SmartBear Store - Automação de Testes
 
-Este projeto contém testes automatizados E2E (End-to-End) para o site **SmartBear Store** utilizando o framework **Cypress**.
+Este repositório faz parte da avaliação do Bootcamp promovido pelo Atlântico Avanti e tem como objetivo demonstrar a aplicação de testes automatizados em um ambiente real de e-commerce, utilizando a plataforma SmartBear Store.
+
+O trabalho foi desenvolvido em equipe pelo Esquadrão 404, com foco em garantir a qualidade e confiabilidade das principais funcionalidades da aplicação, aplicando boas práticas de QA e automação de testes.
+
+## Objetivo
+Automatizar cenários de teste que validem fluxos essenciais do sistema, como login, cadastro, compra de produtos e validação de campos, contribuindo para a identificação de falhas e melhoria contínua da aplicação.
+
+## Equipe - Esquadrão 404
+
+Adriana Moreira: [Github](https://github.com/Adrianamoreira), [LinkedIn](https://www.linkedin.com/in/adriana-moreiranasc/)
+
+Thomas Aquino: [Github](https://github.com/TMSTHOMAS), [LinkedIn](https://www.linkedin.com/in/thomas-santos92/)
+
+Willen Santos: [Github](https://github.com/willen01), [LinkedIn](https://www.linkedin.com/in/willen-santos/)
+
+
 
 ## 📋 Pré-requisitos
 
